@@ -1,5 +1,4 @@
 module MoviesHelper
-
   def total_gross(movie)
     if movie.flop?
       "Flop!"
@@ -11,5 +10,4 @@ module MoviesHelper
   def year_of(movie)
     movie.released_on.year
   end
-
 end

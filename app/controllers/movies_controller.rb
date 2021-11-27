@@ -1,6 +1,6 @@
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.released
   end
 
   def show
@@ -33,9 +33,9 @@ class MoviesController < ApplicationController
     redirect_to movies_url
   end
 
-  private
+private
 
-    def movie_params
-      params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross)
-    end
+  def movie_params
+    params.require(:movie).permit(:title, :description, :rating, :released_on, :total_gross)
+  end
 end
