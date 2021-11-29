@@ -10,6 +10,9 @@ class ReviewsController < ApplicationController
     @review = @movie.reviews.new
   end
 
+  def edit
+  end
+
   def create
     @review = @movie.reviews.new(review_params)
 
