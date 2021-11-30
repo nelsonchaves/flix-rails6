@@ -34,8 +34,9 @@ class UsersController < ApplicationController
   end
 
   def destroy
-  	@user.destroy
-  	redirect_to events_url, alert: "Account successfully deleted!"
+    @user.destroy
+    session[:user_id] = nil
+    redirect_to movies_url, alert: "Account successfully deleted!"
   end
 
   private
