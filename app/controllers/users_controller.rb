@@ -28,11 +28,11 @@ class UsersController < ApplicationController
   end
 
   def update
-  	if @user.update(user_params)
-  		redirect_to @user, notice: "Account successfully updated"
-  	else
-  		render :edit
-  	end
+    if @user.update(user_params)
+      redirect_to @user, notice: "Account successfully updated!"
+    else
+      render :edit
+    end
   end
 
   def destroy
