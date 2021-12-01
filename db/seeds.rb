@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Movie.create!([
   {
     title: 'Avengers: Endgame',
@@ -173,3 +174,42 @@ Movie.create!([
     image_file_name: "wonder-woman.png"
   }
 ])
+
+Genre.create!([
+  { name: "Action" },
+  { name: "Comedy" },
+  { name: "Drama" },
+  { name: "Romance" },
+  { name: "Thriller" },
+  { name: "Fantasy" },
+  { name: "Documentary" },
+  { name: "Adventure" },
+  { name: "Animation" },
+  { name: "Sci-Fi" }
+])
+
+User.create!([
+  {
+    name: "Daisy",
+    email: "daisy@example.com",
+    username: "daiylovesflowers",
+    password: "asdfasdfasdf",
+  },
+  {
+    name: "Larry",
+    email: "larry@example.com",
+    username: "larronator",
+    password: "asdfasdfasdf", },
+  {
+    name: "Moe",
+    email: "moe@example.com",
+    username: "moey12",
+    password: "asdfasdfasdf", },
+  {
+    name: "Nelson",
+    email: "nelsonchavespro@gmail.com",
+    username: "nelly",
+    password: "asdfasdfasdf",
+    admin: true
+   }
+  ])
